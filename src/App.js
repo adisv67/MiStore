@@ -7,8 +7,8 @@ import data from './Data/data.json'
 import Offers from './components/Offers.js'
 import Heading from './components/Heading.js'
 import StarProduct from './components/StarPrdoduct.js'
-import HotAccessoriesMenu from './components./HotAccessoriesMenu.js'
-import HotAccessories from './components./HotAccessories.js';
+import HotAccessoriesMenu from './components/HotAccessoriesMenu.js'
+import HotAccessories from './components/HotAccessories.js';
 
 
 
