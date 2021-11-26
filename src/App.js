@@ -1,12 +1,14 @@
 import './App.css';
 import Prenavbar from './components/Prenavbar';
 import Navbar from './components/Navbar'
-import { BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 import Slider from './components/Slider.js'
 import data from './Data/data.json'
 import Offers from './components/Offers.js'
 import Heading from './components/Heading.js'
 import StarProduct from './components/StarPrdoduct.js'
+import HotAccessoriesMenu from './components./HotAccessoriesMenu.js'
+import HotAccessories from './components./HotAccessories.js';
 
 
 
@@ -21,6 +23,29 @@ function App() {
         <Heading  text="STAR PRODUCTS"/> 
         <StarProduct  starProduct={data.starProduct}/>
         <Heading  text="HOT ACCESSORIES"/> 
+        <HotAccessoriesMenu />
+      
+              <Route exact path="/music">
+              <HotAccessories music={data.hotAccessories.music} musicCover={data.hotAccessoriesCover.music}  />
+              </Route>
+
+              <Route exact path="/smartDevice">
+              <HotAccessories smartDevice={data.hotAccessories.smartDevice} smartDeviceCover={data.hotAccessoriesCover.smartDevice}  />
+              </Route>
+
+              <Route exact path="/home">
+              <HotAccessories home={data.hotAccessories.home} homeCover={data.hotAccessoriesCover.home}  />
+              </Route>
+
+              <Route exact path="/lifestyle">
+              <HotAccessories lifeStyle={data.hotAccessories.lifeStyle} lifeStyleCover={data.hotAccessoriesCover.lifeStyle}  />
+              </Route>
+
+
+              <Route exact path="/mobileAccessories">
+              <HotAccessories mobileAccessories={data.hotAccessories.mobileAccessories} mobileAccessoriesCover={data.hotAccessoriesCover.mobileAccessories}  />
+              </Route>
+      
     </Router>    
   );
 }
