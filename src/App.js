@@ -61,9 +61,9 @@ function App() {
 
        <Heading text="VIDEOS" />
       
-      <Videos videos={data.videos} />
+        <Videos videos={data.videos} />
 
-      <Heading  text="IN THE PRESS"/>
+       <Heading  text="IN THE PRESS"/>
    
        <Banner  banner={data.banner}/>
 
